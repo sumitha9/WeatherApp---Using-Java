@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+
+             mc:Ignorable="d"
+             x:Class="TodoXamarinForms.DetailTodoItem"
+             Title="Details Page">
+   
+    <ContentPage.Content>
+       
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+
+            <Label Text="Item Details"  BackgroundColor="PeachPuff" TextColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="Center"/>
+            <Label Text="Sumitha Add an Item or Edit The Item" BackgroundColor="PeachPuff" TextColor="Black" VerticalOptions="StartAndExpand" HorizontalOptions="Center"/>
+            <Entry Text="{Binding Title}" MaxLength="30" BackgroundColor="OrangeRed" TextColor="DarkBlue"/>
+            <Entry Text="{Binding Description}"  BackgroundColor="OrangeRed"  TextColor="BlanchedAlmond" />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <Button Text="Cancel" Clicked="OnCancelClicked" BackgroundColor="LightBlue"/>
+                <Button Text="Save" Clicked="OnSaveClicked" BackgroundColor="LightBlue"/>
+
+            </StackLayout>
+        </StackLayout>
+       
+
+    </ContentPage.Content>
+</ContentPage>

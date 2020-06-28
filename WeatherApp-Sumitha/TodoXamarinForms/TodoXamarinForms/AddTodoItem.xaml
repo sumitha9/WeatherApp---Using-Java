@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TodoXamarinForms.AddTodoItem">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <Entry Placeholder="City Name" Text="{Binding TodoTitle}" />
+
+            <Entry Placeholder="Units" Text="{Binding Description}" />
+            <Entry Placeholder="Language" Text="{Binding Language}" />
+           
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
+                <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy hh:mm:ss}'}" />
+
+
+                <Button Text="Cancel" Command="{Binding Cancel}" />
+                <Button Text="Save" Command="{Binding Save}" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="TodoXamarinForms.TodoListView"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:TodoXamarinForms"
+         
+             Title="{Binding Title}">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ChangeCompleteActionTextConverter x:Key="ChangeCompletedActionTextConverter" />
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem  Name =" iconexample" Text="Add Item" IconImageSource="icon.png" Priority="0" Order="Default" Command="{Binding AddItem}"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+
+            <ListView ItemsSource="{Binding GroupedTodoList}"
+            IsGroupingEnabled="True"
+            GroupDisplayBinding="{Binding Key}"
+            x:Name="TodoDisplayList" BackgroundColor="White"
+                ItemSelected="OnListItemSelected">
+                <!--<listview.GroupHeaderTemplate-->
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell  >
+                            <StackLayout  Padding="2,2,2,2" Orientation="Horizontal" HorizontalOptions="Fill" >
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Title}" TextColor="Blue" />
+                                    <Label Text="{Binding Description}" TextColor="Black" />
+                                    <Label Text="{Binding Language}" TextColor="Blue" />
+                                </StackLayout>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="Completed:" HorizontalOptions="CenterAndExpand" TextColor="Brown"/>
+                                    <Label Text="{Binding IsCompleted}" TextColor="Green"/>
+                                    <Label Text="{Binding Timestamp}" HorizontalOptions="EndAndExpand" />
+                                </StackLayout>
+                            </StackLayout>
+
+                            <ViewCell.ContextActions>
+                                <MenuItem Command="{Binding Source={x:Reference TodoDisplayList}, Path=BindingContext.ChangeIsCompleted }"
+                                          CommandParameter="{Binding .}" Text="{Binding IsCompleted, Converter={StaticResource ChangeCompletedActionTextConverter}}" />
+
+                                 <!--<MenuItem Command="{Binding Source={x:Reference TodoDisplayList}, Path=BindingContext.Edit }"
+                                          CommandParameter="{Binding .}" Text="Edit" Clicked="" /> -->
+
+                                <MenuItem Command="{Binding Source={x:Reference TodoDisplayList}, Path=BindingContext.Delete }"
+                                          CommandParameter="{Binding .}" Text="Delete" IsDestructive="True" />
+                            </ViewCell.ContextActions>
+                        </ViewCell>
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label Text="{Binding Source={x:Static sys:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy, hh:mm:ss}'}" />
+
+            <Button Command="{Binding AddItem}" Text="Add Item to sumitha's App" BackgroundColor="DarkSlateGray" TextColor="GhostWhite" BorderColor="WhiteSmoke" BorderWidth="3"   />
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

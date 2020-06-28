@@ -1,0 +1,38 @@
+﻿<Properties StartupConfiguration="{535B5C9C-53BC-4D84-80F3-48590B20C8D4}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="TodoXamarinForms/MainPage.xaml">
+    <Files>
+      <File FileName="TodoXamarinForms/AddTodoItem.xaml" Line="2" Column="23" />
+      <File FileName="TodoXamarinForms/Persistence/TodoRepository.cs" Line="1" Column="1" />
+      <File FileName="TodoXamarinForms/AddTodoItemViewModel.cs" Line="1" Column="1" />
+      <File FileName="TodoXamarinForms/App.xaml" Line="1" Column="1" />
+      <File FileName="TodoXamarinForms/ChangeCompleteActionTextConverter.cs" Line="1" Column="1" />
+      <File FileName="TodoXamarinForms/Constants.cs" Line="1" Column="1" />
+      <File FileName="TodoXamarinForms/DetailsAddTodoItem.xaml" Line="1" Column="1" />
+      <File FileName="TodoXamarinForms/FodyWeavers.xml" Line="1" Column="1" />
+      <File FileName="TodoXamarinForms/LongToDateTimeConverter.cs" Line="1" Column="1" />
+      <File FileName="TodoXamarinForms/TodoItem.cs" Line="1" Column="1" />
+      <File FileName="TodoXamarinForms/TodoListView.xaml" Line="36" Column="67" />
+      <File FileName="TodoXamarinForms/TodoListViewModel.cs" />
+      <File FileName="TodoXamarinForms/MainPage.xaml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TodoXamarinForms" expanded="True">
+            <Node name="TodoXamarinForms" expanded="True">
+              <Node name="Persistence" expanded="True" />
+              <Node name="MainPage.xaml" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.TodoXamarinForms.Android PreferredExecutionTarget="Android.pixel_xl_pie_9_0_api_28" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
